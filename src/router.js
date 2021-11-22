@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './components/HelloWorld'
+// import Home from './components/HelloWorld'
 Vue.use(Router)
 
-const routes = [{
+const routes = [
+    {
         path: '/',
-        name: 'Home',
-        component: Home,
+        // component: Home,
+        redirect: 'Rose',
     },
     {
         path: '/statistics',
@@ -16,8 +17,13 @@ const routes = [{
     {
         path: '/excel',
         name: 'excel',
-        component: resolve => require(['@/views/excel'], resolve)
-    }
+        component: resolve => require(['@/views/excel'], resolve),
+    },
+    {
+        path: '/rose',
+        name: 'Rose',
+        component: resolve => require(['@/views/rose'], resolve),
+    },
 ]
 const routers = new Router({
     mode: 'history',
