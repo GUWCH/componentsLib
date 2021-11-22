@@ -1,17 +1,14 @@
-<template>
-    <canvas id="canvas" class="canvas"></canvas>
-</template>
-
-<script>
-export default {
-    data() {
-        return {}
-    },
-    mounted() {
-        this.drawCanvas()
-    },
-    methods: {
-        drawCanvas() {
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script>
             var canvas = document.getElementsByTagName('canvas')[0]
             var context = canvas.getContext('2d')
 
@@ -165,14 +162,6 @@ export default {
             // gradient.addColorStop = ('0.5', 'blue')
             // gradient.addColorStop = ('1', 'red')
             // context.fillStyle = gradient
-        },
-    },
-}
-</script>
-
-<style lang="less" scoped>
-.canvas {
-    // height: 100vh;
-    // width: 100vw;
-}
-</style>
+        </script>
+    </body>
+</html>
